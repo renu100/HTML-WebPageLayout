@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<title>Flex Layout</title>
+<style>
+    * {
+        box-sizing: border-box;
+    }
+
+    body {
+        display: flex;
+        min-height: 100vh;
+        flex-direction: row;
+        margin: 0;
+    }
+
+    .col-1 {
+        background: #f0ff19;
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    .col-2 {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex: 5;
+        font-weight: bold;
+    }
+
+    .content {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .content>article {
+        flex: 3;
+        min-height: 60vh;
+        background-color: #0026ff;
+    }
+
+    .content>aside {
+        background: rgb(255, 97, 163);
+        flex: 1;
+    }
+
+    .content>article>div{
+        background-color: aqua;
+        padding: 10px;
+        margin: 5px;
+    }
+
+    footer {
+        background: rgb(107, 205, 50);
+        height: 10vh;
+        font-size: large;
+        text-align: center;
+        font-weight: bold;
+        }
+
+    header {
+        background: rgb(253, 103, 57);
+        height: 20vh;
+        font-size: large;
+        text-align: center;
+        font-weight: bold;
+    }
+
+    header,
+    footer,
+    article,
+    nav,
+    aside {
+        padding: 1em;
+    }
+</style>
+
+<body>
+    <nav class="col-1">Left side bar</nav>
+    <div class="col-2">
+        <header>
+            <h1>Website layout practice</h1>
+        </header>
+        <div>
+            <main class="content">
+                <article class="article">
+                    <div>
+                        <h1>First article</h1>
+                        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Accusamus doloribus at dolor.
+                            Dignissimos, consequatur ea? Ullam quidem distinctio repellendus accusamus? Quidem et totam,
+                            repudiandae nobis porro possimus, facere alias esse delectus sunt dolorem harum laborum.</p>
+                    </div>
+                    <div>
+                        <h1>Second article</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias atque libero autem vel
+                            aspernatur repellendus sed nostrum facilis, vitae, impedit nisi doloremque nobis eos
+                            pariatur eaque. Sint accusamus, maxime incidunt quasi nemo iste adipisci assumenda ad illo
+                            fugit, placeat architecto magnam vel quas nisi itaque.</p>
+                    </div>
+                    <div>
+                        <h1>Third article</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda fugit optio officiis
+                            eveniet aliquam sunt, tempore nam doloribus quos blanditiis ipsum, rem aspernatur sequi iste
+                            labore, natus earum id voluptate? Labore!</p>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam, excepturi laudantium id
+                            repellat veniam delectus?</p>
+                    </div>
+                </article>
+                <aside>Right side bar</aside> 
+        </main>
+        </div>
+        <footer class="">Footer</footer>
+    </div>
+</body>
